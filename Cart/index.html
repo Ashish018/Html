@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <script src="script.js"></script>
+    <style>
+      table,
+      td,
+      th {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Event Billing</h2>
+    <form id="myForm">
+      <p>ID <input type="text" id="eventId" /></p>
+      <p>Event Name <input type="text" id="eventName" /></p>
+      <p>price <input type="text" id="price" /></p>
+      <button type="button" id="add" onclick="addPrice()">Add to cart</button>
+    </form>
+    <div id="result" style="display: none;">
+      <table id="table1">
+        <tr>
+          <th>ID</th>
+          <th>Product Name</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Remove from cart</th>
+        </tr>
+      </table>
+    </div>
+    <div id="total"></div>
+  </body>
+</html>

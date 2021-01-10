@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #Seminar,
+      #Conference,
+      #teamBuilding {
+        background-color: #c8ffff;
+        display: none;
+      }
+
+      .tablinks:hover {
+        background-color: #6effff;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>Events</h2>
+    <div class="tab">
+      <button onclick="tabEvents(event,'Seminar')" class="tablinks">
+        Seminar
+      </button>
+      <button onclick="tabEvents(event,'Conference')" class="tablinks">
+        Conference
+      </button>
+      <button onclick="tabEvents(event,'teamBuilding')" class="tablinks">
+        Team Building
+      </button>
+    </div>
+    <div id="Seminar">
+      <h3>Seminar</h3>
+      <p>
+        A seminar is a form of academic instruction, either at an academic
+        institution or offered by a commercial or professional organization. It
+        has the function of bringing together small groups for recurring
+        meetings, focusing each time on some particular subject, in which
+        everyone present is requested to participate. This is often accomplished
+        through an ongoing Socratic dialogue with a seminar leader or
+        instructor, or through a more formal presentation of research. It is
+        essentially a place where assigned readings are discussed, questions can
+        be raised and debates can be conducted. At North American universities,
+        the term "seminar" refers to a course of intense study relating to the
+        student's major. Seminars typically have significantly fewer students
+        per professor than normal courses, and are generally more specific in
+        topic of study. Seminars can revolve around term papers, exams,
+        presentations, and several other assignments. Seminars are almost always
+        required for university graduation. Normally, participants must not be
+        beginners in the field under discussion at US and Canadian universities.
+        Seminar classes are generally reserved for upper-class students,
+        although at UK and Australian universities seminars are often used for
+        all years.
+      </p>
+    </div>
+    <div id="Conference">
+      <h3>Conference</h3>
+      <p>
+        A conference is a meeting of people who "confer" about a topic.
+        Conference types include: Convention, meeting of a, usually large, group
+        of individuals and/or companies in a certain field Academic conference,
+        in science and academic, a formal event where researchers present
+        results, workshops, and other activities. Athletic conference, a
+        competitive grouping of teams, often geographical. Authors' conference,
+        or writers' conference, where writers gather to review their written
+        works and suggest improvements. Conference call, in telecommunications,
+        a call with more than two participants at the same time. Conference
+        hall, room where conferences are held. News conference, an announcement
+        to the press with the expectation of questions, about the announced
+        matter. Parent-teacher conference, a meeting with a child's teacher to
+        discuss grades and school performance. Peace conference, a diplomatic
+        meeting to end conflict. Professional conference, a meeting of
+        professionals in a given subject or profession dealing with related
+        matters or developments.
+      </p>
+    </div>
+    <div id="teamBuilding">
+      <h3>Team Building</h3>
+      <p>
+        Team building is a collective term for various types of activities used
+        to enhance social relations and define roles within teams, often
+        involving collaborative tasks. It is distinct from team training, which
+        is designed by a combine of business managers, learning and
+        development/OD and an HR Business Partner to improve the efficiency,
+        rather than interpersonal relations.Team building is one of the most
+        widely used group-development activities in organizations.Of all
+        organizational activities, one study found team-development to have the
+        strongest effect for improving organizational performance. A 2008
+        meta-analysis found that team-development activities, including team
+        building and team training, improve both a team's objective performance
+        and that team's subjective supervisory ratings.Many team-building
+        exercises aim to expose and address interpersonal problems within the
+        group.Over time, these activities are intended to improve performance in
+        a team-based environment. Team building is one of the foundations of
+        organizational development that can be applied to groups such as sports
+        teams, school classes, military units or flight crews.
+      </p>
+    </div>
+  </body>
+
+  <script>
+    function tabEvents(event, id) {
+      document.getElementById(id).style.display = "block";
+      if (id === "Seminar") {
+        document.getElementById("Conference").style.display = "none";
+        document.getElementById("teamBuilding").style.display = "none";
+      } else if (id === "Conference") {
+        document.getElementById("Seminar").style.display = "none";
+        document.getElementById("teamBuilding").style.display = "none";
+      } else {
+        document.getElementById("Conference").style.display = "none";
+        document.getElementById("Seminar").style.display = "none";
+      }
+    }
+  </script>
+</html>

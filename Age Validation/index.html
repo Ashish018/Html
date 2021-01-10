@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <script>
+      //fill your code here
+      function check() {
+        var age = document.getElementById("age").value;
+        try {
+          if (age < 18)
+            throw `You are too early to register in this site. Better you can wait for ${
+              18 - age
+            } years`;
+        } catch (err) {
+          document.getElementById("result").innerHTML = err;
+        } finally {
+          if (age >= 18)
+            document.getElementById(
+              "success"
+            ).innerHTML = `Registration Successfull`;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <!--fill your code here-->
+    <h2>Face Chat</h2>
+    <form>
+      <p>Name <input type="text" id="name" /></p>
+      <p>User Name<input type="text" id="userName" /></p>
+      <p>Age <input type="text" id="age" /></p>
+      <p>Password <input type="password" id="password" /></p>
+      <p>Re-enter Password <input type="password" id="reEnter" /></p>
+      <p>E-mail ID<input type="text" id="email" /></p>
+      <p>Mobile Number <input type="text" id="mobile" /></p>
+      <button type="button" id="register" onclick="check()">Register</button>
+    </form>
+    <div id="result"></div>
+    <div id="success"></div>
+  </body>
+</html>
